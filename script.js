@@ -23,8 +23,15 @@ const gameBoard = (function() {
     ;}
 
     tiles.forEach((tile, index) => {
-        tile.addEventListener('click', () => addMark(currentPlayer.mark,index));
+        tile.addEventListener('click', () => addMark(currentPlayer.mark,index), {once:true});
     });
+
+
+    const swapTurn = () => {
+        if (currentPlayer === player1)
+            currentPlayer = player2;
+        else currentPlayer = player1;
+    }
 
     // listen for a click, change array
     const addMark = (mark, index) => {
@@ -35,6 +42,8 @@ const gameBoard = (function() {
         else array[index] = 'O';
 
         renderTiles();
+        swapTurn();
+
     };
 
     
