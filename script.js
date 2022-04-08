@@ -1,21 +1,56 @@
-const gameBoard = (function () {
 
-    let array = ['X','O','X','O','X','', '', '', ''];
+const playerFactory = function(mark) {
 
+    return {mark};
+};
 
-    // show contents of array on the div
+const player1 = playerFactory('X');
+const player2 = playerFactory('O');
+
+const gameBoard = (function() {
+
+    let array = ['','','','','','', '', '', ''];
+
+    let currentPlayer = player1;
+    
     const tiles = document.querySelectorAll('[data-tile-index]');
+    
+    // show contents of array on the div
+    const renderTiles = () => {
+        tiles.forEach((tile, index) => {
+            tile.textContent = `${array[index]}`;
+        });
+    ;}
+
     tiles.forEach((tile, index) => {
-        tile.textContent = `${array[index]}`;
-    })
-    
-    
+        tile.addEventListener('click', () => addMark(currentPlayer.mark,index));
+    });
+
+    // listen for a click, change array
+    const addMark = (mark, index) => {
+        console.log(mark);
+        console.log(index);
+        if (mark === 'X')
+            array[index] = 'X';
+        else array[index] = 'O';
+
+        renderTiles();
+    };
+
     
 
-
-
-   
 })();
+
+
+
+
+const game = (function() {
+
+})();
+
+
+
+
 
 
 // create 9 tiles
