@@ -11,6 +11,52 @@ body {
     padding: 0;
 }
 
-dialog {
+#wrapper-all {
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: 1fr 10fr 33px;
+}
+
+/* --- HEADER --- */
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+}
+
+header > h1 {
+    margin: 5px 0;
+    font-weight: bolder;
+}
+
+/* --- GAME BOARD --- */
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 10fr 2fr;
+    justify-content: center;
+}
+
+#board-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px
+
+    
     
 }
+
+.board-tile {
+    background-color: rgba(211, 211, 211, 0.233);
+    
+}
+
+footer {
+font-size: 0.75rem;
+}
+
