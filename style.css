@@ -6,7 +6,7 @@ body {
     color: beige;
 }
 
-* {
+*:not(dialog){
     margin: 0;
     padding: 0;
 }
@@ -71,3 +71,29 @@ footer {
 font-size: 0.75rem;
 }
 
+
+/* --- MODALS --- */
+
+.start-screen {
+    border:0;
+    border-radius: 5px;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.438);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.start-screen button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    width: fit-content;
+}

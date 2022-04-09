@@ -43,7 +43,13 @@
 
             <dialog class="start-screen">
                 <p>Let's play!</p>
-                <button type="button">PLAY</button>
+                <form id="playerInfo" action="dialog">
+                    <label for="player1-name">Player 1</label>
+                    <input type="text" id="player1-name" placeholder="Enter your name...">
+                    <label for="player2-name">Player 2</label>
+                    <input type="text" placeholder="Enter your name...">
+                </form>
+                <button type="button" form="playerInfo">PLAY</button>
             </dialog>
             <dialog class="win-screen">
                 <p>You win!</p>

@@ -1,3 +1,8 @@
+const startScreen = document.querySelector('.start-screen');
+startScreen.showModal();
+
+
+
 
 const playerFactory = function(mark) {
 
@@ -47,17 +52,65 @@ const gameBoard = (function() {
 
     };
 
-    
+    return { array, currentPlayer };
 
 })();
 
+let arai = [ [1,2,3], [3,4,5], [6,7,8]];
 
+console.log(arai[0]);
+console.log(arai[1][0]);
 
 
 const game = (function() {
 
     //check win
+        // check array of gameboard
+        // if index of 'x' is at 0,1,2, its a win
+        // let xIndex =[];
 
+        
+        // array.forEach((mark, index) => {
+        
+        //     if (array[index] === mark) { 
+
+        //     if (xIndex.includes(`${index}`) continue;
+        //     xIndex.push('${index}');
+        //     }};
+    
+        //     we sort
+
+
+        //     xIndex.sort()
+        //     let counter;
+        //     sortedXIndex.forEach((item, index)=> 
+
+        //         for (let i = 0; i < winning.length; i++) {
+        //             for (let j = 0; j < 3; j++) {
+        //                 if (sortedXIndex[index] === winning[0][0]) {
+        //                 counter++
+        //             } else { continue; }
+    
+        //             if (counter === 3) break;   
+        //             }
+                        
+        //             }
+                
+            
+        //     )
+        //     }
+        //     if yes 3 times then its a win
+
+
+        //         if yes then is 
+
+        
+            
+            
+                //map index into another array
+        
+
+    let winningIndexArray = []
 
 
 })();
