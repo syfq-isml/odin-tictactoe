@@ -43,6 +43,7 @@ const gameBoard = (function() {
 
         renderTiles();
         swapTurn();
+        console.log(array);
 
     };
 
@@ -54,6 +55,10 @@ const gameBoard = (function() {
 
 
 const game = (function() {
+
+    //check win
+
+
 
 })();
 
